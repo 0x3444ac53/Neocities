@@ -17,8 +17,9 @@
 				  (reverse items))))))))
 
 (define (listitem title author platform link)
-  `((a (@ (style "text-decoration:none") (href ,link))
-      (li (@ (class "w3-teal w3-card"))
+  `((a (@ (style "text-decoration:none") 
+	  (href ,link))
+      (li (@ (class "w3-card w3-teal"))
 	  ,title (br)
 	  "by " ,author (br)
 	  "via " ,platform)) (br)))

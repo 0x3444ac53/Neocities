@@ -4,7 +4,7 @@
 (write-file 
   "../build/hazel.html"
   (list-page 
-    "Hazel List"
+    "Haydyn's List"
     '(("The Romance of the Revolutionary Movement"
        "Roberto Manabeira Unger"
        "Verso"
