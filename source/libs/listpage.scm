@@ -1,0 +1,27 @@
+(import sxml-serializer)
+(import (chicken port)
+        (chicken process-context))
+
+(define (list-page title items)
+  `(html
+     (title ,title)
+     (meta (@ (name "viewport") (content "width=device-width, initial-scale=1")))
+     (link (@ (rel "stylesheet") (href "https://www.w3schools.com/w3css/4/w3.css")))
+     (body (@ (class "w3-light-grey"))
+	   (div (@ (class "w3-container w3-pale-green")) 
+		(h1 ,title))
+	   (div (@ (class "w3-row-padding w3-margin-top"))
+		(ul (@ (class "w3-ul w3-margin-left w3-margin-right"))
+		    ,@(map (lambda (item) `,item) 
+			   (map (lambda (item) (apply listitem item))
+				  (reverse items))))))))
+
+(define (listitem title author platform link)
+  `((a (@ (style "text-decoration:none") (href ,link))
+      (li (@ (class "w3-teal w3-card"))
+	  ,title (br)
+	  "by " ,author (br)
+	  "via " ,platform)) (br)))
+
+(define (write-file filename contents)
+  (serialize-sxml contents output: filename))

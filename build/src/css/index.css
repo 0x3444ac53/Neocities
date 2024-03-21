@@ -1,0 +1,19 @@
+@font-face {
+    font-family: HandWriting;
+    src: url("../fonts/kiwi.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: HandWritingTwo;
+    src: url("../fonts/ShadowsIntoLight-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Main;
+    src: url("../fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: MonoItalics;
+    src: url("../fonts/VictorMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
